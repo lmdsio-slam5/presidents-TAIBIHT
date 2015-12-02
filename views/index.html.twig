@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,16 @@
     <link href="{{ app.request.basepath }}/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title>Presidents</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Les Présidents de la République Française</h1>
         <ul>
             {% for president in presidents %}
-                <li>{{ president.firstName }} {{ president.lastName }}</li>
+            <li>{{ president.firstName }} {{ president.lastName }}</li> né en {{president.yearOfBirth}}</li>
             {% endfor %}
         </ul>
     </div>
 </body>
+
 </html>
